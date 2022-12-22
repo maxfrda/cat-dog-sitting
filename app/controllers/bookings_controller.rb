@@ -1,22 +1,22 @@
 class BookingsController < ApplicationController
+  
   def new
     @booking = Booking.new
   end
 
   def create
-   booking = Booking.create(booking_params)
-   redirect_to root_path, redirect_options_for(booking)
+    booking = Booking.new(booking_params)
+    cost = PricingEngine.new(animal_type: booking.animal_type, hours_requested: booking.hours_requested).determine_cost
+    booking.cost = cost
+    
+    if booking.save
+      redirect_to root_path, { notice: "Booked successfully. Your total is $#{cost}."}
+    else
+      redirect_to root_path, { alert: "Your booking could not be completed"}
+    end
   end
 
   private
-
-  def redirect_options_for(booking)
-    if booking.persisted?
-      { notice: "Booked successfully"}
-    else
-      { alert: 'Could not book'}
-    end
-  end
 
   def booking_params
     params.require(:booking).permit(:first_name, :last_name, :animal_name, :animal_type, :hours_requested,

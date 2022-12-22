@@ -15,7 +15,10 @@
 
 <div class="text-field">
   <%= form.label :animal_type %>
-  <%= form.text_field :animal_type, required: true %>
+  <%= form.radio_button :animal_type, 'dog' %> 
+  <%= form.label :animal_type, 'Dog', :value => 'dog' %>
+  <%= form.radio_button :animal_type, 'cat' %>
+  <%= form.label :animal_type, 'Cat', :value => 'cat' %>
 </div>
 
 <div class="text-field">
