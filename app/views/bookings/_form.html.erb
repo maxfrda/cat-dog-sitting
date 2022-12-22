@@ -1,29 +1,29 @@
 <div class="text-field">
   <%= form.label :first_name %>
-  <%= form.text_field :first_name %>
+  <%= form.text_field :first_name, required: true %>
 </div>
 
 <div class="text-field">
   <%= form.label :last_name %>
-  <%= form.text_field :last_name %>
+  <%= form.text_field :last_name, required: true %>
 </div>
 
 <div class="text-field">
   <%= form.label :animal_name %>
-  <%= form.text_field :animal_name %>
+  <%= form.text_field :animal_name, required: true %>
 </div>
 
 <div class="text-field">
   <%= form.label :animal_type %>
-  <%= form.text_field :animal_type %>
+  <%= form.text_field :animal_type, required: true %>
 </div>
 
 <div class="text-field">
   <%= form.label :hours_requested %>
-  <%= form.number_field :hours_requested %>
+  <%= form.number_field :hours_requested, required: true, min: 2, max: 8 %>
 </div>
 
 <div class="date-field">
-  <%= form.label :date %>
-  <%= form.date_field :date %>
+  <%= form.label :date_of_service %>
+  <%= form.date_field :date_of_service, required: true, min: Date.today %>
 </div>
