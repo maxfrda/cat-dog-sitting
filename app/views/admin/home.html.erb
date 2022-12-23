@@ -1,34 +1,39 @@
 <% @bookings.each do |booking| %>
   <div class="bookings-container">
-    <div class="booking-card">
-      <span>First Name:</span>
-      <span><%= booking.first_name %></span>
+    <div class="booking-card-title">
+      <span> Booking</span>
+      <span>#<%= booking.id %></span>
     </div>
-      <span>Last Name:</span>
-      <span><%= booking.last_name %></span>
+    <hr>
     <div class="booking-card">
-      <span>Animal Name:</span>
-      <span><%= booking.animal_name %></span>
-    </div>
-    <div class="booking-card">
-      <span>Animal Type:</span>
-      <span><%= booking.animal_type %></span>
-    </div>
-    <div class="booking-card">
-      <span>Hours Requested:</span>
-      <span><%= booking.hours_requested %></span>
-    </div>
-    <div class="booking-card">
-      <span>Date of Service:</span>
-      <span><%= booking.date_of_service.strftime("%B %d, %Y") %></span>
-    </div>
-    <div class="booking-card">
-      <span>Cost:</span>
-      <span><%= booking.cost %></span>
-    </div>
-    <div class="booking-card">
-      <span>Created:</span>
-      <span><%= time_ago_in_words(booking.created_at) %></span>
+      <div class="booking-info">
+        <div class="bold">First Name:</div>
+        <div><%= booking.first_name %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Last Name:</div>
+        <div><%= booking.last_name %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Animal Name:</div>
+        <div><%= booking.animal_name %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Animal Type:</div>
+        <div><%= booking.animal_type %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Hours Req:</div>
+        <div><%= booking.hours_requested %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Date:</div>
+        <div><%= booking.date_of_service.strftime("%m/%d/%y") %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Cost:</div>
+        <div><%= booking.cost %></div>
+      </div>
     </div>
   </div>
 <% end %>

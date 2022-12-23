@@ -5,11 +5,47 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin: 10px auto;
   padding: 10px;
-  width: 30%;
+  width: 20%;
   /* or height: 9.5in; */
   background-color: white;
 }
 
-// .container{
-//   margin-top: 200px;
-// }
+.booking-card-title{
+  text-align: center;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.booking-card{
+  margin: 10px;
+}
+
+.booking-info{
+  font-size: 22px;
+  column-count: 2;
+  column-gap: 110px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted rgba(128,128,128,.3);
+}
+
+hr {
+  opacity: 30%;
+  margin-bottom: 20px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
