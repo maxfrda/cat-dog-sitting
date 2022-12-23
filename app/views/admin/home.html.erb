@@ -1,0 +1,34 @@
+<% @bookings.each do |booking| %>
+  <div class="bookings-container">
+    <div class="booking-card">
+      <span>First Name:</span>
+      <span><%= booking.first_name %></span>
+    </div>
+      <span>Last Name:</span>
+      <span><%= booking.last_name %></span>
+    <div class="booking-card">
+      <span>Animal Name:</span>
+      <span><%= booking.animal_name %></span>
+    </div>
+    <div class="booking-card">
+      <span>Animal Type:</span>
+      <span><%= booking.animal_type %></span>
+    </div>
+    <div class="booking-card">
+      <span>Hours Requested:</span>
+      <span><%= booking.hours_requested %></span>
+    </div>
+    <div class="booking-card">
+      <span>Date of Service:</span>
+      <span><%= booking.date_of_service.strftime("%B %d, %Y") %></span>
+    </div>
+    <div class="booking-card">
+      <span>Cost:</span>
+      <span><%= booking.cost %></span>
+    </div>
+    <div class="booking-card">
+      <span>Created:</span>
+      <span><%= time_ago_in_words(booking.created_at) %></span>
+    </div>
+  </div>
+<% end %>
