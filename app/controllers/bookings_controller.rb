@@ -10,9 +10,9 @@ class BookingsController < ApplicationController
     booking.cost = cost
     
     if booking.save
-      redirect_to root_path, { notice: "Booked successfully. Your total is $#{cost}."}
+      redirect_to new_booking_path, { notice: "Booked successfully. Your total is $#{cost}."}
     else
-      redirect_to root_path, { alert: "Your booking could not be completed"}
+      redirect_to new_booking_path, { alert: "Your booking could not be completed"}
     end
   end
 

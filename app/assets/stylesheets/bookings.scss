@@ -1,6 +1,11 @@
 // Place all the styles related to the bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#grad {
+  background: #F7F7F7;
+  height: 100vh;
+}
+
 .bookings-container{
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin: 10px auto;
@@ -14,10 +19,11 @@
   text-align: center;
   font-size: 23px;
   font-weight: 600;
+  margin-top: 20px;
 }
 
 .booking-card{
-  margin: 10px;
+  margin: 50px;
 }
 
 .booking-info{
@@ -26,6 +32,12 @@
   column-gap: 110px;
   margin-bottom: 15px;
   border-bottom: 1px dotted rgba(128,128,128,.3);
+}
+
+.main{
+  align-self: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 hr {
@@ -45,7 +57,50 @@ hr {
   padding: 0;
 }
 
-.cards_item {
+.cards-item {
   display: flex;
   padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.text-field{
+  margin-bottom: 20px;
+}
+
+.text-field input{
+  padding:10px;
+  border-radius:10px;
+  border: 2px solid rgba(128,128,128,.6);
+}
+
+#booking_date_of_service{
+  display: block;
+}
+
+#booking_hours_requested{
+  display: block;
+}
+
+.submit:hover{
+  background: #73c035;
 }

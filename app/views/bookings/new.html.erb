@@ -1,12 +1,17 @@
 <div class="container">
-  <h2>Book your sitting service</h2>
-
-  <%= form_for @booking do |form| %>
-    <%= render partial: 'form', object: form %>
-
-    <div class="submit-field">
-      <%= form.submit %>
+  <div class="bookings-container">
+    <div class="booking-card-title">
+      Book Your Sitting Service
     </div>
+    <div class="booking-card">
+      <%= form_for @booking do |form| %>
+        <%= render partial: 'form', object: form %>
 
-  <% end %>
+        <div class="submit-field">
+          <%= form.submit "Create Booking", class: 'cta book submit'%>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
 </div>

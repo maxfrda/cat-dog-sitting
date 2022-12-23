@@ -7,7 +7,7 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :animal_type, null: false
       t.integer :hours_requested, null: false
       t.datetime :date_of_service, null: false
-      t.float :cost, null: false
+      t.float :cost, null: false, precision: 3, scale: 2
 
       t.timestamps
     end

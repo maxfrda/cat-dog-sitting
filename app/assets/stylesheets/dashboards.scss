@@ -30,28 +30,24 @@
   border-bottom: 19px solid #ddd;
   z-index: 0;
 }
-.cta-admin {
+
+.cta{
   color: #fff;
   padding: 14px 28px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: .6px;
   border-radius: 99999rem;
+  box-shadow: 0px 5px 0px #cecccc;
+}
+.admin {
   border: 3px solid #80EAF1;
   background: #84d3d8;
-  box-shadow: 0px 5px 0px #cecccc;
   text-shadow: -1px -1px 2px #55b4b8;
 }
-.cta-book{
-  color: #fff;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .6px;
-  border-radius: 99999rem;
+.book{
   border: 3px solid #9ccd65;
   background: rgb(175, 216, 144);
-  box-shadow: 0px 5px 0px #cecccc;
   text-shadow: -1px -1px 2px #73c035;
 }
 
