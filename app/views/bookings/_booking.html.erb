@@ -1,0 +1,40 @@
+<li class="cards-item">
+  <div class="card">
+    <div class="booking-card-title">
+      <span> Booking</span>
+      <span>#<%= booking.id %></span>
+    </div>
+    <hr>
+    <div class="booking-card">
+      <div class="booking-info">
+        <div class="bold">First Name:</div>
+        <div><%= booking.first_name.capitalize %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Last Name:</div>
+        <div><%= booking.last_name.capitalize %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Animal Name:</div>
+        <div><%= booking.animal_name.capitalize %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Animal Type:</div>
+        <div><%= booking.animal_type.capitalize %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Hours Req:</div>
+        <div><%= booking.hours_requested %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Date:</div>
+        <div><%= booking.date_of_service.strftime("%m/%d/%y") %></div>
+      </div>
+      <div class="booking-info">
+        <div class="bold">Cost:</div>
+        
+        <div>$<%= sprintf("%.2f", booking.cost) %></div>
+      </div>
+    </div>
+  </div>
+</li>
