@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+    <div id="notice">
+      <%= flash[:alert] %>
+    </div>
     <title>CatDogSitting</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>

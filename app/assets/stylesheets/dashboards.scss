@@ -1,6 +1,22 @@
 // Place all the styles related to the dashboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#notice{
+  color: green;
+}
+
+#alert{
+  color: red
+}
+
+#alert, #notice{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
 .feat-block {
   position: absolute;
   z-index: 1;
