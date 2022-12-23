@@ -5,6 +5,11 @@ Clone repo
 ```
 git clone https://github.com/maxfrda/cat-dog-sitting.git
 ```
+Switch to repo directory
+```
+cd cat-dog-sitting
+```
+
 Setup repo
 ```
 bundle install && yarn install
