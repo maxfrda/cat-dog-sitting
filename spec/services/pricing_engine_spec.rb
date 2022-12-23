@@ -31,9 +31,17 @@ RSpec.describe PricingEngine do
         context "and 8 hours are requested" do
           it "returns 60" do
             pricing_engine = PricingEngine.new(animal_type: 'cat', hours_requested: 8)
-            
+
             expect(pricing_engine.determine_cost).to eq(60)
           end
+        end
+      end
+
+      context "if the animal type is not valid" do
+        it "returns nil" do
+          pricing_engine = PricingEngine.new(animal_type: 'rat', hours_requested: 2)
+
+          expect(pricing_engine.determine_cost).to eq(nil)
         end
       end
     end

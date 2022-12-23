@@ -9,11 +9,11 @@ class BookingsController < ApplicationController
     cost = PricingEngine.new(animal_type: booking.animal_type, hours_requested: booking.hours_requested).determine_cost
     booking.cost = cost
     
-    if booking.save
-      redirect_to new_booking_path, { notice: "Booked successfully. Your total is $#{cost}."}
-    else
-      redirect_to new_booking_path, { alert: "Your booking could not be completed"}
-    end
+    booking.save!
+    redirect_to new_booking_path, { notice: "Booked successfully. Your total is $#{cost}."}
+  rescue => e 
+    puts e
+    redirect_to new_booking_path, { alert: "Your booking could not be completed"}
   end
 
   private
